@@ -1,0 +1,112 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+        <script>
+            
+            //forma literal
+            function somar(n1, n2){
+                //corpo da função
+                return n1 + n2
+            }
+            
+            var soma = somar(10, 20)
+            console.log('Resultado: ', soma)
+            
+            somar.teste = 'propriedade da função'
+            
+            console.log(somar.teste)
+            
+            var teste = function(str){
+                console.log('testando', str)
+            };
+            
+            teste('sla')
+            
+            var teste2 = function(f){
+                f()
+            }
+            
+            teste2(function(){
+                   console.log('função passada por parâmetro')
+            })
+            
+            console.log('-----------------------')
+            
+            var x = 0
+            
+            function mostraX(){
+                var x = 10; //escopo local
+                console.log('mostra x dentro: ', x)
+            }
+            mostraX()
+            
+            console.log('mostra x fora: ', x)
+            
+            var y = 20
+            
+            function mostraY(){
+                y = 40; //escopo global
+                console.log("mosta y dentro: ", y)
+            }
+            mostraY()
+            
+            console.log('mostra y fora: ', y)
+            
+            //função auto executável
+            /* (function(){
+                
+            })() */
+            
+            //Boa prática:
+            /* 
+                function(){
+                    'use strict'
+                    ...
+                }
+            */
+               
+            function somando(){
+                var n1 = 10;
+                var n2 = 20;
+                console.log(n1 + n2);
+            }
+            somando();
+            
+            function somando2(n1, n2){
+                console.log(n1 + n2)
+            }
+            somando2(15, 25)
+            
+            function somar(arr){
+                var x = 0
+                for(var i = 0; i < arr.length; i++){
+                    x += arr[i]
+                }
+                alert(x)
+            }
+            
+            somar([20, 30, 45])
+            
+            function somar2(){
+                var result = 0
+                var i = 0
+                while(arguments[i]){
+                    result += arguments(i)
+                    i++
+                }
+                alert(result)
+            }
+            
+            somar(20, 30, 45)
+            
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+
+    </body>
+<html>

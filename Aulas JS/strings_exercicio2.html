@@ -1,0 +1,39 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <p>Minions ipsum bappleees baboiii tank yuuu! Pepete bananaaaa bananaaaa belloo! Poulet tikka masala aaaaaah. Tank yuuu! po kass tank yuuu! Jiji po kass para tú bananaaaa potatoooo gelatooo underweaaar wiiiii. Hana dul sae poopayee tulaliloo bappleees bananaaaa baboiii belloo! Me want bananaaa! chasy la bodaaa tank yuuu! Ti aamoo! Wiiiii chasy para tú potatoooo tatata bala tu tank yuuu! Tulaliloo poulet tikka masala belloo! Bappleees hana dul sae. Potatoooo poulet tikka masala jeje bananaaaa la bodaaa potatoooo poopayee butt. Aaaaaah baboiii poopayee hahaha bee do bee do bee do me want bananaaa! Bananaaaa butt hana dul sae bappleees ti aamoo!</p>
+        <p>Jeje tatata bala tu tulaliloo pepete. Para tú daa jeje me want bananaaa! Aaaaaah potatoooo. Bananaaaa bee do bee do bee do gelatooo chasy aaaaaah po kass. Jeje tank yuuu! Underweaaar wiiiii tatata bala tu poopayee ti aamoo! Po kass jeje potatoooo chasy pepete aaaaaah baboiii. Para tú potatoooo bananaaaa tank yuuu! Jeje chasy jiji.</p>
+        <p>Butt butt bee do bee do bee do poopayee underweaaar. Chasy chasy para tú jiji para tú para tú pepete me want bananaaa! Pepete bananaaaa uuuhhh bappleees butt tank yuuu! Baboiii jiji underweaaar. Belloo! poopayee para tú me want bananaaa! Tulaliloo po kass daa uuuhhh belloo! Poopayee. Tulaliloo bee do bee do bee do ti aamoo! Tank yuuu! Chasy tank yuuu! Bappleees. Aaaaaah uuuhhh gelatooo tatata bala tu poulet tikka masala tank yuuu! Tank yuuu! Po kass. Po kass butt hahaha poopayee butt la bodaaa. Underweaaar tatata bala tu bappleees me want bananaaa! Ti aamoo! Aaaaaah para tú ti aamoo! Potatoooo hahaha hana dul sae.</p>
+        <p>Gelatooo hahaha daa bananaaaa daa bappleees bappleees. Jiji tatata bala tu belloo! Butt tatata bala tu underweaaar ti aamoo! Underweaaar baboiii la bodaaa daa. Me want bananaaa! hahaha bee do bee do bee do tulaliloo. Jeje potatoooo tank yuuu! La bodaaa bappleees tatata bala tu po kass jeje. Ti aamoo! jiji uuuhhh la bodaaa belloo! Potatoooo wiiiii hahaha potatoooo me want bananaaa! Pepete.</p>
+        <p>Minions ipsum et belloo! Bananaaaa minim elit tatata bala tu underweaaar irure uuuhhh. Et cillum chasy veniam para tú ad. Tempor reprehenderit ti aamoo! Voluptate gelatooo. Jiji tatata bala tu laboris poulet tikka masala wiiiii chasy. Me want bananaaa! occaecat commodo aliquip poulet tikka masala eiusmod incididunt.</p>
+        <p>Uuuhhh enim hahaha bappleees sit amet. Sed irure commodo potatoooo occaecat tulaliloo dolor wiiiii dolore tulaliloo hana dul sae. Consequat tatata bala tu quis enim. Butt daa baboiii enim me want bananaaa! Consectetur poulet tikka masala potatoooo bee do bee do bee do consequat butt voluptate aliqua hana dul sae baboiii. Consequat gelatooo incididunt ex para tú ad butt tank yuuu! Pepete incididunt dolore. Underweaaar bappleees hana dul sae tatata bala tu nostrud qui labore eiusmod tulaliloo. Voluptate tatata bala tu dolor dolor uuuhhh cillum tank yuuu!</p>
+        <p>Cillum poopayee uuuhhh et adipisicing pepete uuuhhh. Tank yuuu! gelatooo veniam dolore butt gelatooo poulet tikka masala bananaaaa ex aaaaaah daa. Poulet tikka masala belloo! Exercitation incididunt poopayee daa nostrud. Incididunt consectetur butt aute tulaliloo sed elit tulaliloo. Hahaha irure sed duis poopayee bappleees bappleees underweaaar magna veniam. Duis enim cillum tatata bala tu et laboris. Tank yuuu! poopayee esse incididunt bee do bee do bee do daa dolore ut elit. Qui ad ti aamoo! Po kass underweaaar consectetur para tú exercitation jeje. Potatoooo voluptate labore aliqua belloo! Esse bappleees hahaha.</p>
+        <p>Consequat baboiii hahaha chasy para tú occaecat. Chasy nostrud irure chasy aliquip voluptate ullamco. Tempor poopayee ut chasy. Baboiii ex cillum sit amet reprehenderit. Esse ex et eiusmod dolore la bodaaa esse quis ad la bodaaa nostrud. Poulet tikka masala bananaaaa cillum ti aamoo! Nisi uuuhhh ti aamoo! Nisi ti aamoo! Potatoooo.</p>
+        
+        <script>
+            
+            var p = document.querySelectorAll('p')
+            
+            for(var i = 0; p[i]; i++){
+                p[i].innerHTML = corta(p[i].innerHTML)
+            }
+            
+            function corta(p){
+                if(p.length > 500){
+                    p = p.slice(0, 500) + '...'
+                    return p
+                } else{
+                    return p
+                }
+            }
+                
+        </script>
+        
+    </body>
+<html>

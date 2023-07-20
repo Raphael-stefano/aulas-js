@@ -1,0 +1,28 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <script>
+            
+            function Pessoa(nome){
+                this.nome = nome
+                this.fala = function(msg){
+                    console.log(this.nome + ' disse ' + msg)
+                }
+                this.endereco = 'rua qualquer'
+            }
+            
+            var raphael = new Pessoa('raphael')
+            var gabriel = Object.create(raphael) //clonou o objeto raphael
+            gabriel.nome = 'gabriel' //agora o objeto está apenas com o nome diferente
+            
+        </script>
+        
+    </body>
+<html>

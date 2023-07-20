@@ -1,0 +1,42 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <div></div>
+        
+        <script>
+            
+            /* 
+            setTimeout(fn, ms)
+            setInterval(fn, ms)
+            clearTimeout(id)
+            clearInterval(id)
+            */
+            
+            var n = 0
+            var d = document.querySelector('div')
+            
+            var intervalo = setInterval(function(){
+                console.log('n', ++n)
+                if(n >= 5){
+                clearInterval(intervalo)
+                }
+            }, 1000)
+            
+            var str = ''
+            var teste = setTimeout(function(){
+                for(var i = 0; i <= 1000; i++){
+                    str += 'i: ' + i + ' -- '
+                    d.textContent = str
+                }
+            }, 2000)
+            
+        </script>
+        
+    </body>
+<html>

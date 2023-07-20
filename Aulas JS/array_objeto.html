@@ -1,0 +1,33 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        <div id='tabela'></div>
+        
+        <script>
+            
+            var nomes = ['maria', 'joão', 'joaquim']
+            
+            var cad = {nome: 'caderno', preco: 120, cor: 'azul'}
+            
+            var prod = [cad, {nome: 'lápis', preco: 2, cor: 'verde'}, {nome: 'estojo', preco: 20, cor: 'preto'}]
+            
+            var tabela = document.querySelector('#tabela')
+            
+            var msg = ''
+            
+            for(var i = 0; i < prod.length; i++){
+                msg += '<h2>Nome do produto: ' + prod[i].nome + '</h2> Preço do produto: ' + prod[i].preco + '<br> Cor do produto: ' + prod[i].cor + '<hr>'
+            }
+            
+            tabela.innerHTML = msg
+            
+        </script>
+        
+    </body>
+<html>

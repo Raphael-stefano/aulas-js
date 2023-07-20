@@ -1,0 +1,26 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        <button onclick="A()">Mostrar área</button>
+        <div id='A'></div>
+        
+        <script>
+            
+            var n = prompt('Base');
+            var m = prompt('Altura');
+            var area = document.querySelector('#A');
+            function A(){
+                var result = (n * m);
+                area.innerHTML = result;
+            }
+            
+        </script>
+        
+    </body>
+<html>

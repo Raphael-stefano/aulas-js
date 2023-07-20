@@ -1,0 +1,57 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        <button onclick="calc(' + ')">+</button>
+        <button onclick="calc(' - ')">-</button>
+        <button onclick="calc(' * ')">x</button>
+        <button onclick="calc(' / ')">/</button>
+        <button onclick="limpa()">Limpar</button>
+        <br>
+        <div id='numero'></div>
+        
+        <script>
+            
+            var result = ''
+            var n = prompt('Digite um número');
+            n = parseFloat(n)
+            var numero = document.querySelector('#numero');
+            result += n;
+            numero.innerHTML = result;
+            
+            function calc(a){
+                var x = prompt('digite outro número');
+                x = parseFloat(x);
+                
+                    switch(a){
+                        case ' + ':
+                            n += x;
+                            break;
+                        case ' - ':
+                            n -= x;
+                            break;
+                        case ' * ':
+                            n *= x;
+                            break;
+                        case ' / ':
+                            n /= x
+                    };    
+                
+                result = n;
+                numero.innerHTML = result;
+            }
+            
+            function limpa(){
+                result = prompt('digite um número');
+                numero.innerHTML = result;
+            }
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,68 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <button onclick='InserirPeso()'>Peso</button>
+        <button onclick="InserirAltura()">Altura</button>
+        <button onclick="MostrarResultado()">IMC</button>
+        <br> <br>
+        <div id='peso'></div> 
+        <div id='altura'></div> 
+        <div id='IMC'></div> 
+        <div id='situacao'></div> 
+        
+        <script>
+            //imc = peso/altura^2
+                
+                var k;
+                var h; 
+                var p; 
+                
+                function InserirPeso(){
+                    var n = prompt('Insira seu peso')
+                    n = parseFloat(n)
+                    k = n
+                    var peso = document.querySelector('#peso')
+                    peso.innerHTML = 'Seu peso: ' + k
+                }
+                
+                function InserirAltura(){
+                    var m = parseFloat(prompt('Insira sua altura'))
+                    h = m
+                    var altura = document.querySelector('#altura')
+                    altura.innerHTML = 'Sua Altura: ' + h
+                }
+                
+                function MostrarResultado(){
+                    p = (k / h**2)
+                    var IMC = document.querySelector('#IMC')
+                    IMC.innerHTML = 'Seu IMC: ' + p
+                    var situacao = document.querySelector('#situacao')
+                    if((p >= 16) && (p < 17)){
+                        situacao.innerHTML = 'Muito abaixo do peso'
+                    } if((p >= 17) && (p < 18.5)){
+                        situacao.innerHTML = 'Abaixo do peso'
+                    } if((p >= 18.5) && (p < 25)){
+                        situacao.innerHTML = 'Peso normal'
+                    } if((p >= 25) && (p < 30)){
+                        situacao.innerHTML = 'Acima do peso'
+                    } if((p >= 30) && (p < 35)){
+                        situacao.innerHTML = 'Obesidade grau I'
+                    } if((p >= 35) && (p <= 40)){
+                        situacao.innerHTML = 'Obesidade grau II'
+                    } if(p > 40){
+                        situacao.innerHTML = 'Obesidade grau III'
+                    } if(p < 16){
+                        situacao.innerHTML = 'Índice fora dos limites da tabela'
+                    }
+                }
+                
+        </script>
+        
+    </body>
+<html>

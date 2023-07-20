@@ -1,0 +1,38 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        
+        <form>
+            <label for='user'>Usuário</label>
+            <input type='text' id='user'>
+            <br><br>
+            <label for='pass'>Senha</label>
+            <input type='password' id='pass'>
+            <br><br>
+            <input id='enter' type='submit' value="Entrar">
+        </form>
+        
+        <script>
+            
+            var form = document.querySelector('form')
+            var user = document.querySelector('#user')
+            var pass = document.querySelector('#pass')
+            var enter = document.querySelector('#enter')
+            
+            form.addEventListener('submit', function(e){
+                if(user.value == '' || pass.value == ''){
+                    alert('Insira o usuário e a senha')
+                    e.preventDefault()
+                }
+            })
+            
+        </script>
+        
+    </body>
+<html>

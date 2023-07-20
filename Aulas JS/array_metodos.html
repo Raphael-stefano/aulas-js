@@ -1,0 +1,67 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        
+        <script>
+            
+            var arr = [1,2,3,4,5,'ola','teste']
+            
+            var x = 1
+            
+            var a = arr.every(function(elemento, indice, objeto){
+                return typeof elemento === 'number'
+            })  //retorna true se todos os itens da array passarem no parametro
+            
+            var b = arr.some(function(elemento, indice, objeto){
+                return typeof elemento === 'number'
+            })  //retorna true se ao menos um item da array passar no parametro
+            
+            var c = arr.filter(function(elemento, indice, arr){
+                return typeof elemento === 'number'
+            })  //retorna um array com os itens que satisfazem o parametro
+            
+            arr.forEach(function(elemento, indice, arr){
+                console.log('elemento: ' + elemento + '| índice: ' + indice + 'array: ' + arr.toString())    
+            }) //executa a função para cada item da array
+            
+            var d = arr.indexOf('ola', x) //retorna a posição de 'ola' no array, começando a procurar somente a partir de x
+            //lastIndexOf faz a mesma coisa só que conta da direita para a esquerda
+            
+            var e = c.map(function(elemento, indice, arr){
+                return elemento * indice 
+            }) 
+            
+            var f = arr.concat(e, 'mais um item', 10)
+            
+            var g = arr.join() //transforma em string separada por vírgula (igual o método toString, porem o metodo join pode substiruir a virgula por outro separador colocando-o como parâmetro) 
+            
+            var h = arr.push('novo item') //agora a arr tem o novo item, e h é a length de arr
+            
+            var i = arr.pop() //remove o ultimo item de arr, i é a length
+            
+            var j = arr.shift() //remove o primeiro item de arr, j é a length
+            
+            var k = arr.unshift(1) //adiciona o 1 à arr, k é a length
+            
+            var l = c.reduce(function(anterior, atual, indice, arr){
+                return anterior + atual 
+            }) //reduce right faz a mesma coisa só que da direita para a esquerda
+            
+            var m = arr.reverse() //inverte a arr. tanto m quanto arr são a arr original invertida
+            
+            var n = arr.slice(2, 5) //nao modifica a arr original. retorna arr do indice 2 ao indice 5
+            //incluindo o 2 e excluindo o 5
+            
+            var o = arr.splice(2, 0, 'limão', 'melão') //inclui limao e melao a partir do indice dois, e exclui 0 itens
+            // o seria uma array com os elementos excluidos, nesse caso uma array vazia
+            
+        </script>
+        
+    </body>
+<html>

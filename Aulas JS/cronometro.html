@@ -1,0 +1,53 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <input type='text' id='cronometro'>
+        <button id='iniciar'>Iniciar/Despausar</button>
+        <button id='pausar'>Pausar</button>
+        <button id='parar'>Parar</button>
+        
+        <script>
+            
+            var cronometro = document.querySelector('#cronometro')
+            var iniciar = document.querySelector('#iniciar')
+            var pausar = document.querySelector('#pausar')
+            var parar = document.querySelector('#parar')
+            
+            pausar.addEventListener('click', pause)
+            iniciar.addEventListener('click', init)
+            parar.addEventListener('click', reset)
+            
+            var intervalo
+            
+            cronometro.value = 0
+            
+            function init(){
+                var x = cronometro.value
+                var inicio = new Date()
+                intervalo = setInterval(function(){
+                    var agora = new Date()
+                    var n = Math.floor(agora.getTime()/1000)
+                    var m = Math.floor(inicio.getTime()/1000)
+                    cronometro.value = n - m + parseFloat(x)
+                }, 1000)
+            }
+            
+            function pause(){
+                clearInterval(intervalo)                    
+            }
+            
+            function reset(){
+                cronometro.value = 0
+                clearInterval(intervalo)
+            }
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,35 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        
+        <script>
+            
+            function Caneta(preco, cor){
+                this.preco = preco || 1; 
+                this.cor = cor || 'preto';
+                this.mudaPreco = function(preco){
+                    this.preco = preco;
+                };
+                this.mudaCor = function(cor){
+                    this.cor = cor;
+                };
+                if(this.cor != 'vermelho' && this.cor != 'azul' && this.cor != 'preto'){
+                    this.cor = null;
+                    alert('insira uma cor válida');  
+                }; 
+            }
+            
+            var caneta1 = new Caneta(2, 'azul')
+            
+            var caneta2 = new Caneta(4, 'verde')
+            
+        </script>
+        
+    </body>
+<html>

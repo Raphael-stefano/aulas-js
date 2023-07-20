@@ -1,0 +1,25 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <input text='text' id='txtNome' value="Digite seu nome"><button onclick="submit()">Submeter nome</button>
+        <div id='msg'></div>
+        
+        <script>
+            
+            var n = document.getElementById('txtNome') 
+            var msg = document.getElementById('msg')
+            function submit(){
+                var nome = n.value
+                msg.innerHTML = 'Bem-vindo, ' + nome
+            }
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,68 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1> 
+        <input value='Insira seu nome' id='ADnome'>
+        <input value='Insira seu sobrenome' id='ADsobrenome'>
+        <button onclick="submitName()">Submeter nome</button>
+        <div id='tabela'></div>
+        
+        <script>
+            
+            var table = document.querySelector('#tabela')
+            
+            function NomeCompleto(nome, sobrenome){
+                this.nome = nome 
+                this.sobrenome = sobrenome
+                this.mudaNome = function(novoNome){
+                    this.nome = novoNome
+                }
+                this.mudaSobrenome = function(novoSobrenome){
+                    this.sobrenome = novoSobrenome
+                }
+            }
+            
+            var nome1 = new NomeCompleto('Ester', 'de Souza')
+            
+            var nome2 = new NomeCompleto('Josimar', 'de Almeida')
+            
+            var nome3 = new NomeCompleto('Francisco', 'da Silva')
+            
+            var nome4 = new NomeCompleto('Maria', 'do Carmo')
+            
+            var nome5 = new NomeCompleto('Joaquim', 'Santos')
+            
+            var nomes = [nome1, nome2, nome3]
+            
+            nomes.push(nome4, nome5)
+            
+            var ADnome = document.querySelector('#ADnome')
+            
+            var ADsobrenome = document.querySelector('#ADsobrenome')
+            
+            var tabela = ''
+            
+            for(var i = 0; i < nomes.length; i++){
+                tabela += nomes[i].nome + ' ' + nomes[i].sobrenome + '<br>'
+            }
+            
+            table.innerHTML = tabela
+            
+            function submitName(){
+                var newName = ADnome.value 
+                var newLastname = ADsobrenome.value
+                var novo = new NomeCompleto(newName, newLastname)
+                nomes.push(novo)
+                tabela += novo.nome + ' ' + novo.sobrenome + '<br>'
+                table.innerHTML = tabela
+            }
+            
+        </script>
+        
+    </body>
+<html>

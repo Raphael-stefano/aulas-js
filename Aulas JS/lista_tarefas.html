@@ -1,0 +1,86 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+        <style>
+            
+            .feito{
+                text-decoration: underline;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <h2>Lista de tarefas</h2>
+        <ul id='lista'>
+            <li><input type='checkbox'>Ir no médico</li>
+            <li><input type='checkbox'>Lavar o carro</li>
+            <li><input type='checkbox'>Cortar o cabelo</li>
+        </ul>
+        
+        <br>
+        <br>
+        
+        <input id='novo' type='text'>
+        <br>
+        <br>
+        <button id='btn'>Adicionar ítem</button>
+        
+        <script>
+            
+            var lista = document.getElementById('lista')
+            var lis = document.querySelectorAll('#lista li')
+            var novo = document.getElementById('novo')
+            var btn = document.getElementById('btn')
+            
+            function addNovo(){
+                var li = document.createElement('li')
+                var txt = document.createTextNode(novo.value)
+                li.appendChild(txt)
+                lista.appendChild(li)
+                //lista.innerHTML += '<li> <input type=\'checkbox\'>' + novo.value + '</li>'
+                novo.value = ''
+                novo.focus()
+                addEvent(li);
+                addCheck(li);
+            }
+            
+            function addCheck(li){
+                li.innerHTML = '<input type=\'checkbox\'>' + li.innerHTML
+            }
+            
+            function addEvent(li){
+                li.addEventListener('click', done)
+            }
+            
+            for(var i = 0; lis[i]; i++){
+                lis[i].addEventListener('click', done)
+            }
+            
+            function done(){
+                    this.classList.toggle('feito')
+                    var check = this.querySelector('input')
+                    if(check.checked){
+                        check.checked = false
+                    } else{
+                        check.checked = true
+                    }
+                    addEvent(li)
+                }
+            
+            btn.addEventListener('click', addNovo)
+            
+            novo.addEventListener('keyup', function(e){
+                if(e.keyCode == 13){
+                    addNovo()
+                }
+            })
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,35 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <label for='range'>Range a ser sorteado</label>
+        <input id='range' type='number'>
+        <button id='btn'>Sortear</button>
+        <br><br>
+        <div id='resultado'>Número sorteado: </div>
+        
+        <script>
+            
+            var range = document.querySelector('#range')
+            var btn = document.querySelector('#btn')
+            var resultado = document.querySelector('#resultado')
+            
+            btn.addEventListener('click', sortear)
+            
+            function sortear(){
+                var n = range.value 
+                var m = Math.random()
+                var x = n * m
+                var sorteio = Math.round(x)
+                resultado.innerHTML = 'Número sorteado: ' + sorteio
+            }
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,33 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <script>
+            
+            var nome = 'Raphael'
+            
+            function mostraNome(){
+                alert(nome)
+                var nome = 'Stefano'
+                
+                alert(testeHoisting())
+                
+                function testeHoisting(){
+                    return 'funcionou'    
+                }
+                
+            } //vai dar undefined. A variável deveria estar acima do alert
+            //porém a parte do 'funcionou' vai funcionar
+            
+            mostraNome()
+            
+        </script>
+        
+    </body>
+<html>

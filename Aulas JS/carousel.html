@@ -1,0 +1,98 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+        <style>
+            
+            div{
+                height: 300px;
+                width: 800px;
+                border: 1px solid black;
+                margin: auto;
+                background-size: cover; 
+                position: relative;
+            }
+            
+            button{
+                height: 300px;
+                width: 30px;
+                background: rgba(0, 0, 0, .5);
+                color: white;
+                border: none;
+            }
+            
+            #btn2{
+                position: relative;
+                right: 0px;
+                left: 740px
+            }
+            
+            .class1{
+                background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_66.jpg)
+            }
+            
+            .class2{
+                background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_42.jpg)
+            }
+            
+            .class3{
+                background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_27.jpg)
+            }
+            
+            .class4{
+                background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_28.jpg)
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <div><button id='btn1'>-</button><button id='btn2'>+</button></div>
+        
+        <script>
+            
+            var imagem = document.querySelector('div')
+            var btn1 = document.getElementById('btn1')
+            var btn2 = document.getElementById('btn2')
+            
+            var i = 0
+            
+            var list = ['class1', 'class2', 'class3', 'class4']
+            
+            function addImage(){
+                imagem.className = ''
+                imagem.classList.add(list[i])
+            }
+            addImage()
+            
+            btn2.addEventListener('click', function(){
+                i += 1
+                if(i > 3){
+                    i = 0
+                }
+                addImage()
+            })
+            
+            btn1.addEventListener('click', function(){
+                i -= 1
+                if(i < 0){
+                    i = 3
+                }
+                addImage()
+            })
+            
+            setInterval(function(){
+                i += 1
+                if(i > 3){
+                    i = 0
+                }
+                addImage()
+            }, 5000)
+            
+        </script>
+        
+    </body>
+<html>

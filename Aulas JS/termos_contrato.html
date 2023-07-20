@@ -1,0 +1,31 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <form>
+        <input type='checkbox' id='termos'>
+        <label for='termos'>Li e concordo com os termos do contrato</label>
+        <br><br>
+        <input type='submit' id='send'>
+        </form>
+        
+        <script>
+            
+            var term = document.querySelector('#termos')
+            var send = document.querySelector('#send')
+            
+            send.disabled = !term.checked 
+            
+            term.addEventListener('change', function(){
+                send.disabled = !this.checked
+            })
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,30 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+        <textarea id='msg' maxlength="150"></textarea>
+        <p>Restam <span id='resto'></span> caracteres</p>
+        
+        <script>
+            
+            var resto = document.getElementById('resto')
+            var msg = document.getElementById('msg')
+            
+            var max = msg.maxLength
+            
+            resto.textContent = max
+            
+            msg.addEventListener('input', function(e){
+                var n = this.value.length
+                resto.textContent = max - n
+            })
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,47 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        
+        <script>
+            
+            var dias = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
+            
+            var hoje = new Date(); // dá a data atual
+            hoje.getDay() //dá o dia da semana (domingo é 0, segunda é 1...)
+            var diaSemana = hoje.getDay()
+            
+            switch(diaSemana){
+                case 0:
+                    alert('Hoje é domingo');
+                    break;
+                case 1:
+                    alert('Hoje é segunda-feira');
+                    break;
+                case 2:
+                    alert('Hoje é terça-feira');
+                    break;
+                case 3:
+                    alert('Hoje é quarta-feira');
+                    break;
+                case 4:
+                    alert('Hoje é quinta-feira');
+                    break;
+                case 5:
+                    alert('Hoje é sexta-feira');
+                    break;
+                case 6:
+                    alert('Hoje é sábado');
+            }
+            
+            alert('Lembrando: hoje é ' + dias[diaSemana])
+            
+        </script>
+        
+    </body>
+<html>

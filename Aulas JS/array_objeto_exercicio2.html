@@ -1,0 +1,30 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        <button onclick="mostra()">Mostrar dados</button>
+        <div id='tabela'></div>
+        
+        <script>
+            
+            var user = [{nome: 'João', email: 'joaodasneves@gmail.com'}, {nome: 'Maria', email: 'mariajanaina@gmail.com'}, {nome: 'godofredo', email: 'kinggodfried@gmail.com'}]
+            
+            var tab = document.querySelector('#tabela')
+            
+            var msg = ''
+            
+            function mostra(){
+                var i = prompt('Digite o número do usuário')
+                msg = '<h2>Dados do usuário ' + i + ': </h2>' + 'Nome: ' + user[i - 1].nome + '<br>Email: ' + user[i - 1].email 
+                tab.innerHTML = msg
+            }
+            
+        </script>
+        
+    </body>
+<html>

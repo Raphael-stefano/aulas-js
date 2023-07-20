@@ -1,0 +1,46 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Lógica de programação</title>
+        <meta charset="utf-8">
+        
+                
+        <script>
+            
+            
+            
+        </script>
+        
+        
+    </head>
+    <body>
+        <h1>Curso Lógica de programação</h1>
+        <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+        <button onclick="limparTabuada()">Limpar tabuada</button>
+        <div id="sla"></div>
+        
+        <script>
+            var mensagem = ''
+            var seila = document.querySelector('#sla') 
+            function mostrarTabuada(){
+                var n = prompt('Digite um número')
+                parseFloat(n) 
+                var i = 1
+                parseInt(i)
+            
+                while(i <= 50){
+                    mensagem += n + ' x ' + i + ' = ' + (n * i) + '<br>'
+                    i = i + 1
+                }
+                seila.innerHTML = mensagem
+            }
+            
+            function limparTabuada(){
+                mensagem = ''
+                seila.innerHTML = mensagem;
+            }
+            
+        </script>
+        
+    </body>
+<html>

@@ -1,0 +1,39 @@
+<doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        <div id='div1'></div>
+        
+        <script>
+            
+            var div1 = document.getElementById('div1')
+            
+            const alunos = [
+                {id: 1, nome:'daniel'},
+                {id: 2, nome:'maria'},
+                {id: 3, nome:'josé'},
+                {id: 4, nome:'joão'},
+            ]
+            
+            const Faltas = [
+                {idAluno: 1, faltas: 5},
+                {idAluno: 2, faltas: 11},
+                {idAluno: 3, faltas: 0},
+                {idAluno: 4, faltas: 15},
+            ]
+            
+            for(var i = 0; i < Faltas.length; i++){
+                if(Faltas[i].faltas > 10){
+                    div1.innerHTML += alunos[i].nome +'<br>'
+                }
+            }
+            
+        </script>
+        
+    </body>
+<html>
